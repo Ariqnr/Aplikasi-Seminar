@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.AplikasiPendaftaranSeminar" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/navy_blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/gold_amber</item>
+        <item name="colorOnSecondary">@color/navy_blue</item>
+        <item name="android:windowBackground">@color/antique_cream</item>
+        <item name="colorSurface">@color/antique_cream</item>
+    </style>
+
+    <style name="Theme.SeminarApp" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/navy</item>
+        <item name="colorSecondary">@color/gold</item>
+    </style>
+
+    <style name="Theme.AplikasiPendaftaranSeminar" parent="Base.Theme.AplikasiPendaftaranSeminar" />
+</resources>

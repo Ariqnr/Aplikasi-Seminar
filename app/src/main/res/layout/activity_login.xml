@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_login.xml -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0E1A2E"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingTop="48dp"
+            android:paddingBottom="16dp"
+            android:paddingHorizontal="24dp">
+
+            <ImageView
+                android:id="@+id/ivCompassLogo"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:src="@drawable/ic_compass"
+                app:tint="#C9A84C"
+                android:layout_marginBottom="16dp"
+                android:contentDescription="Logo Kompas"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seminar Registration"
+                android:textColor="#E8C87A"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:fontFamily="serif"
+                android:letterSpacing="0.03"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Navigasi jalur ilmu pengetahuan"
+                android:textColor="#556080"
+                android:textSize="13sp"
+                android:textStyle="italic"
+                android:layout_marginTop="4dp"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="60dp"
+                android:layout_height="1dp"
+                android:background="#C9A84C"
+                android:alpha="0.4"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginBottom="24dp"
+            app:cardBackgroundColor="#12213A"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp"
+            app:strokeColor="#2A3D60"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="— Masuk ke Kapal —"
+                    android:textColor="#E8C87A"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"
+                    android:letterSpacing="0.08"
+                    android:gravity="center"
+                    android:layout_marginBottom="20dp"/>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    app:cardBackgroundColor="#1A2E4A"
+                    app:cardCornerRadius="10dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="#2A4060"
+                    app:strokeWidth="1dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="12dp"
+                        android:gravity="top">
+
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/ic_info"
+                            app:tint="#C9A84C"
+                            android:alpha="0.5"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginTop="1dp"
+                            android:contentDescription="Info"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Gunakan kredensial kapten: nama pengguna Robert dan sandi yang telah ditetapkan."
+                            android:textColor="#8A9BBF"
+                            android:textSize="11sp"
+                            android:textStyle="italic"
+                            android:lineSpacingExtra="3dp"/>
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilUsername"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:hint="Nama Pengguna"
+                    app:boxStrokeColor="#C9A84C"
+                    app:boxBackgroundColor="#1B2A4A"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="#C9A84C"
+                    app:startIconDrawable="@drawable/ic_person"
+                    app:startIconTint="#C9A84C">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etUsername"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textColor="#F5F0E8"
+                        android:textColorHint="#3A5070"
+                        android:imeOptions="actionNext"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPassword"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    android:hint="Kata Sandi"
+                    app:boxStrokeColor="#C9A84C"
+                    app:boxBackgroundColor="#1B2A4A"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:hintTextColor="#C9A84C"
+                    app:startIconDrawable="@drawable/ic_lock"
+                    app:startIconTint="#C9A84C"
+                    app:endIconMode="password_toggle"
+                    app:endIconTint="#C9A84C">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword"
+                        android:textColor="#F5F0E8"
+                        android:textColorHint="#3A5070"
+                        android:imeOptions="actionDone"/>
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="52dp"
+                    android:text="BERLAYAR MASUK"
+                    android:textColor="#0E1A2E"
+                    android:textSize="13sp"
+                    android:letterSpacing="0.08"
+                    android:fontFamily="serif"
+                    android:textStyle="bold"
+                    app:backgroundTint="#C9A84C"
+                    app:cornerRadius="14dp"
+                    app:icon="@drawable/ic_arrow_forward"
+                    app:iconTint="#0E1A2E"
+                    app:iconGravity="textStart"
+                    app:rippleColor="#1B2A4A"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Belum punya akun? Daftar di sini"
+                    android:textColor="#3A5070"
+                    android:textSize="12sp"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_marginTop="14dp"/>
+
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:paddingBottom="32dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="★  Seminar Registration App — Navigator v1.0"
+                android:textColor="#2A3D60"
+                android:textSize="11sp"
+                android:textStyle="italic"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

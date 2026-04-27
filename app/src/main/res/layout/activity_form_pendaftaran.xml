@@ -1,0 +1,440 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- activity_form_pendaftaran.xml -->
+<!-- Tema: Perkapalan Bersejarah | Warna: Navy #1B2A4A + Gold #C9A84C -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/antique_cream"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="32dp">
+
+        <!-- ===== HEADER BANNER ===== -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:background="@color/navy_blue">
+
+            <!-- Tombol Back - Diposisikan di paling kiri -->
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="Kembali"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="@color/gold_amber" />
+
+            <!-- Judul - Diposisikan di tengah -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Pendaftaran Seminar"
+                    android:textColor="#E8C87A"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="serif"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Isi formulir dengan teliti, Kapten"
+                    android:textColor="#8A9BBF"
+                    android:textSize="12sp"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+
+            <!-- Ikon Kompas - Tetap di kanan -->
+            <ImageView
+                android:id="@+id/ivCompass"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="20dp"
+                android:src="@drawable/ic_compass"
+                app:tint="@color/gold_amber"/>
+
+            <!-- Wave Bottom Shape (Simplified) -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/antique_cream"/>
+        </RelativeLayout>
+
+        <!-- ===== PADDING KONTEN ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="16dp">
+
+            <!-- ===== CARD 1: DATA PRIBADI ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#1F1B2A4A"
+                app:strokeWidth="0.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <!-- Label Seksi -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="DATA PRIBADI"
+                        android:textColor="@color/navy_blue"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.12"
+                        android:layout_marginBottom="16dp"
+                        android:drawableStart="@drawable/ic_person"
+                        android:drawablePadding="6dp"
+                        app:drawableTint="@color/navy_blue"/>
+
+                    <!-- Field Nama -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilNama"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:hint="Nama Lengkap"
+                        app:boxStrokeColor="@color/navy_blue"
+                        app:boxBackgroundColor="@color/antique_cream"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:hintTextColor="@color/navy_blue"
+                        app:startIconDrawable="@drawable/ic_person"
+                        app:startIconTint="@color/navy_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etNama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textPersonName"
+                            android:textColor="@color/navy_blue"
+                            android:textColorHint="#BCAE95"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Field Email -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilEmail"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="14dp"
+                        android:hint="Email"
+                        app:boxStrokeColor="@color/navy_blue"
+                        app:boxBackgroundColor="@color/antique_cream"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:hintTextColor="@color/navy_blue"
+                        app:startIconDrawable="@drawable/ic_email"
+                        app:startIconTint="@color/navy_blue">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEmail"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/navy_blue"
+                            android:textColorHint="#BCAE95"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Field Nomor HP -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilHp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Nomor HP (08xxxxxxxxxx)"
+                        app:boxStrokeColor="@color/navy_blue"
+                        app:boxBackgroundColor="@color/antique_cream"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:hintTextColor="@color/navy_blue"
+                        app:startIconDrawable="@drawable/ic_phone"
+                        app:startIconTint="@color/navy_blue"
+                        app:counterEnabled="true"
+                        app:counterMaxLength="13">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etHp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="phone"
+                            android:maxLength="13"
+                            android:textColor="@color/navy_blue"
+                            android:textColorHint="#BCAE95"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== DIVIDER TALI (Rope) ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="1" android:background="@drawable/bg_rope_line"/>
+                <ImageView android:layout_width="10dp" android:layout_height="10dp"
+                    android:src="@drawable/ic_anchor" android:layout_marginHorizontal="8dp"
+                    app:tint="@color/gold_amber"/>
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="1" android:background="@drawable/bg_rope_line"/>
+            </LinearLayout>
+
+            <!-- ===== CARD 2: JENIS KELAMIN ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="JENIS KELAMIN"
+                        android:textColor="@color/navy_blue"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.12"
+                        android:layout_marginBottom="14dp"/>
+
+                    <RadioGroup
+                        android:id="@+id/rgJenisKelamin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <!-- Radio: Laki-laki -->
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rbLakilaki"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:layout_marginEnd="8dp"
+                            android:text="Laki-laki"
+                            android:textColor="@color/navy_blue"
+                            android:background="@drawable/bg_radio_selector"
+                            android:gravity="center"
+                            android:checked="true"
+                            android:button="@null"
+                            android:paddingHorizontal="12dp"
+                            app:buttonTint="@color/navy_blue"/>
+
+                        <!-- Radio: Perempuan -->
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rbPerempuan"
+                            android:layout_width="0dp"
+                            android:layout_height="48dp"
+                            android:layout_weight="1"
+                            android:text="Perempuan"
+                            android:textColor="@color/navy_blue"
+                            android:background="@drawable/bg_radio_selector"
+                            android:gravity="center"
+                            android:button="@null"
+                            android:paddingHorizontal="12dp"
+                            app:buttonTint="@color/navy_blue"/>
+                    </RadioGroup>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== DIVIDER TALI ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="1" android:background="@drawable/bg_rope_line"/>
+                <ImageView android:layout_width="10dp" android:layout_height="10dp"
+                    android:src="@drawable/ic_anchor" android:layout_marginHorizontal="8dp"
+                    app:tint="@color/gold_amber"/>
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="1" android:background="@drawable/bg_rope_line"/>
+            </LinearLayout>
+
+            <!-- ===== CARD 3: PILIHAN SEMINAR ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="PILIHAN SEMINAR"
+                        android:textColor="@color/navy_blue"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        android:letterSpacing="0.12"
+                        android:layout_marginBottom="14dp"/>
+
+                    <!-- Spinner dengan TextInputLayout -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/tilSeminar"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pilih Seminar"
+                        app:boxStrokeColor="@color/navy_blue"
+                        app:boxBackgroundColor="@color/antique_cream"
+                        app:boxCornerRadiusTopStart="10dp"
+                        app:boxCornerRadiusTopEnd="10dp"
+                        app:boxCornerRadiusBottomStart="10dp"
+                        app:boxCornerRadiusBottomEnd="10dp"
+                        app:hintTextColor="@color/navy_blue"
+                        app:startIconDrawable="@drawable/ic_seminar"
+                        app:startIconTint="@color/navy_blue">
+
+                        <!-- AutoCompleteTextView berfungsi sebagai Spinner Material -->
+                        <AutoCompleteTextView
+                            android:id="@+id/actvSeminar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="none"
+                            android:textColor="@color/navy_blue"
+                            android:textColorHint="#BCAE95"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== DIVIDER TALI ===== -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="12dp">
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="1" android:background="@drawable/bg_rope_line"/>
+                <ImageView android:layout_width="10dp" android:layout_height="10dp"
+                    android:src="@drawable/ic_anchor" android:layout_marginHorizontal="8dp"
+                    app:tint="@color/gold_amber"/>
+                <View android:layout_width="0dp" android:layout_height="2dp"
+                    android:layout_weight="1" android:background="@drawable/bg_rope_line"/>
+            </LinearLayout>
+
+            <!-- ===== CARD 4: PERSETUJUAN ===== -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardCheckbox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                app:cardBackgroundColor="#F5EDCC"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/gold_amber"
+                app:strokeWidth="1.5dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="14dp"
+                    android:gravity="top">
+
+                    <com.google.android.material.checkbox.MaterialCheckBox
+                        android:id="@+id/cbPersetujuan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginTop="2dp"
+                        app:buttonTint="@color/navy_blue"
+                        app:useMaterialThemeColors="false"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Saya menyetujui bahwa data yang telah saya isi adalah benar dan dapat dipertanggungjawabkan."
+                        android:textColor="@color/navy_blue"
+                        android:textSize="13sp"
+                        android:textStyle="italic"
+                        android:lineSpacingExtra="4dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ===== TOMBOL SUBMIT ===== -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="KIRIM PENDAFTARAN"
+                android:textColor="#E8C87A"
+                android:textSize="14sp"
+                android:letterSpacing="0.08"
+                android:fontFamily="serif"
+                app:backgroundTint="@color/navy_blue"
+                app:cornerRadius="14dp"
+                app:icon="@drawable/ic_send"
+                app:iconTint="@color/gold_amber"
+                app:iconGravity="textStart"
+                app:rippleColor="@color/gold_amber"/>
+
+            <!-- Footer -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚓  Seminar Registration App — Navigator v1.0"
+                android:textColor="#BCAE95"
+                android:textSize="11sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:layout_marginTop="14dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>
